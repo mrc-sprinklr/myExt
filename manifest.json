@@ -2,25 +2,15 @@
     "manifest_version": 3,
     "name": "myExt",
     "version": "1.0",
-    "content_scripts": [
-        {
-            "matches": [
-                "http://*/*",
-                "https://*/*",
-                "file://*/*"
-            ],
-            "js": ["./content_script.js"]
-        }
-    ],
-    "action": {
-        "default_icon": "logo_light.png"
-    },
     "icons": {
-        "128": "logo_light.png"
+        "128": "logo.png"
+    },
+    "background": {
+        "service_worker": "app.js"
     },
     "permissions": [
         "activeTab",
-        "cookies"
+        "background"
     ],
     "host_permissions": [
         "<all_urls>"
